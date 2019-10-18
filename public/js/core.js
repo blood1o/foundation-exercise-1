@@ -41,6 +41,7 @@ const buildProductCard = product => (
       </div>
     </li>
     
+    
   `
 );
 

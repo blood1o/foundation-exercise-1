@@ -12,7 +12,7 @@ You must have nodejs installed on your laptop computer. You can find installatio
 
 You must have a code editor installed as well, we encourage to use Visual Studio Code. You can find installation packages and guides for your platform here: https://code.visualstudio.com/
 
-## Execute
+## Executed
 
 Once you had cloned this repository:
 
