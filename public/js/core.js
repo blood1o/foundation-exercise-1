@@ -40,8 +40,16 @@ const buildProductCard = product => (
         </div>
       </div>
     </li>
+    
   `
 );
+
+const total = granTotal => (
+`
+<h6>Total a pagar : ${granTotal}</h6>
+`
+);
+
 
 let getProducts = categoria => {
   let url = `/v1/products/${categoria}`;
@@ -67,8 +75,12 @@ let getProducts = categoria => {
     .catch(error => console.error('Error:', error));
 };
 
+let granTotal = 0;
 const addToCart = productId => {
+  let product = products[productId];
+  granTotal = granTotal+product['price-sale'];
   $('#shopping-cart-items').append(buildProductCard(products[productId]));
+  $('#total-price').append(total(granTotal));
   $('#shoppingCart').modal('show');
 }
 
